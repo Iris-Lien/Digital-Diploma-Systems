@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	
+	<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link href="./NDHUdigitaldiploma_files/bootstrap.css" rel="stylesheet">
+	<link href="./NDHUdigitaldiploma_files/master.css" rel="stylesheet" type="text/css">
+    
+    <script src="./NDHUdigitaldiploma_files/jquery-1.7.2.min.js.下載" type="text/javascript"></script>
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <script src="./NDHUdigitaldiploma_files/jquery-1.3.1.js.下載" type="text/javascript"></script>
+    <script src="./NDHUdigitaldiploma_files/jquery.tipsy.js.下載" type="text/javascript"></script>
+    <link href="./NDHUdigitaldiploma_files/tipsy.css" rel="stylesheet" type="text/css">
+	<title>Dowmload</title>
+	<script src="js/web3.min.js"></script>
+
+</head>
+  
+  <body>
+    <div class="wrapper">
+        <div class="top">
+            <div class="left-top">
+            </div>
+            <div class="right-top">
+            </div>
+        </div>
+        <div class="middle">
+            <div class="center">
+                <div class="logo">
+                    <img src="./NDHUdigitaldiploma_files/logo.jpg" alt="國立東華大學">
+              
+                </div>
+                <div class="banner">
+                    <img src="./NDHUdigitaldiploma_files/sysname.jpg" alt="">
+                    <h1>數位畢業證書查詢系統</h1>
+
+                </div>
+                <div class="shad">
+                </div>
+                <div class="content">
+				
+				
+				
+	<div class="logincon">
+	<div class="logintitle">您的畢業證書連結</div>
+	<br>
+	<div align="center">
+	<div id="copythis">
+	https://ipfs.io/ipfs/<em id="Address"></em>
+	</div>
+	
+	<a href="javascript:void(0)" onclick="CopyTextToClipboard('copythis')">
+
+	<i class="fas fa-clipboard"></i> 複製連結</a>
+	
+	<br>
+	<br>
+	</div>
+	</div>
+	
+	<script>
+	
+	web3 = new Web3(window.ethereum)
+        window.ethereum.enable().catch(error => {
+        // User denied account access
+        console.log(error)
+    });
+	
+	var Contract;
+	var abi = [
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_student_id",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_ID",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "_birth",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_mark",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "_dip_address",
+				"type": "string"
+			}
+		],
+		"name": "create",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "num",
+				"type": "uint256"
+			}
+		],
+		"name": "get_birth",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "num",
+				"type": "uint256"
+			}
+		],
+		"name": "get_dip",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "num",
+				"type": "uint256"
+			}
+		],
+		"name": "get_mark",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "num",
+				"type": "uint256"
+			}
+		],
+		"name": "get_student_id",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"name": "people",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "student_id",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "ID",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "birth",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "mark",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "dip_address",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "persons",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "student_id",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "ID",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "birth",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "mark",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "dip_address",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "show",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}
+];
+	
+	var address = '0xC06Dd861c4015aC8A624B9F41e3A0FBB8B21FA2F';
+	
+	var ID = window.opener.document.getElementById('tmp_ID').textContent;
+	
+	async function init() {
+		Contract = await new web3.eth.Contract(abi,address);
+		Contract.methods.get_dip(ID).call()
+        .then(function(data){
+            document.getElementById('Address').textContent = data;
+        })
+		
+	}
+	init();
+	
+	function CopyTextToClipboard(id) {
+    var TextRange = document.createRange();
+    TextRange.selectNode(document.getElementById(id));
+    sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(TextRange);
+    document.execCommand("copy");
+    alert("複製完成！") //此行可加可不加
+  }
+	</script>
+	
+  </body>
+</html>
+
+
+

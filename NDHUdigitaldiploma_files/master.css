@@ -1,0 +1,776 @@
+﻿/*css reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	border-style: none;
+    border-color: inherit;
+    border-width: 0;
+    padding: 0;
+    font-size: 100%;
+	vertical-align: baseline;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*css reset 結束*/
+
+/*Master Page*/
+
+body
+{
+	/*margin: 0;*/
+	/*padding: 0;*/
+/*	font-size: 0.8em;*/
+	color: #333;
+	background: #fafafa;
+}
+
+a:link, a:visited
+{
+	color: #3C8EC6;
+	text-decoration: none;
+}
+
+a:hover, a:active
+{
+	color: #369;
+	text-decoration: underline;
+}
+
+.wrapper {
+    /*width: 65%;*/
+    /*width:1024px;*/
+	margin: 0 auto;
+	margin-top: 10px;
+	background: #fff url(../images/v-shad.jpg) left center repeat-y;
+}
+
+.top
+{
+	height: 20px;
+	background: url(../images/h-shad.jpg) center top repeat-x;
+	position: relative;
+	font-size: 0;
+}
+
+.left-top
+{
+	width: 20px;
+	height: 20px;
+	background: url(../images/shad.jpg) no-repeat;
+}
+
+.right-top
+{
+	width: 20px;
+	height: 20px;
+	background: url(../images/shad.jpg) -20px 0 no-repeat;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.middle
+{
+	margin-left: 10px;
+	padding-right: 10px;
+	background: #fff url(../images/v-shad.jpg) right center repeat-y;
+}
+
+.center
+{
+	background: #fff;
+}
+
+.bottom
+{
+	height: 20px;
+	background: url(../images/h-shad.jpg) center bottom repeat-x;
+	position: relative;
+	font-size: 0;
+}
+
+.left-bottom
+{
+	width: 20px;
+	height: 20px;
+	background: url(../images/shad.jpg) 0 -20px no-repeat;
+}
+
+.right-bottom
+{
+	width: 20px;
+	height: 20px;
+	background: url(../images/shad.jpg) -20px -20px no-repeat;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+.logo
+{
+	position: relative;
+}
+
+.logo img
+{
+	margin-left: 10px;
+}
+
+.nav
+{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+
+.nav li
+{
+	display: inline;
+	border-right: 1px solid #dfdfdf;
+	padding: 0 10px;
+}
+
+.banner
+{
+	height: 135px;
+	/*background: url(../images/banner-bg.jpg) repeat-x;*/
+    position: relative;
+}
+.banner img {
+   width:100%; 
+   height:135px;  
+}
+.banner h1 {
+   position:absolute;
+   left:30px;
+   top:30px;
+   color:white;
+   font-size:26px;
+   line-height:40px;
+}
+
+.banner-end
+{
+	position: absolute;
+	right: 0;
+}
+
+.shad
+{
+	height: 7px;
+	background: url(../images/shad-bg.jpg) repeat-x;
+}
+
+.content
+{
+	padding: 20px;
+	/*min-height: 500px;*/
+}
+
+.footer
+{
+	text-align: center;
+	color: #666;
+	margin-top: 10px;
+}
+
+
+/*Server Controls*/
+
+.btn
+{
+	background: url(../images/grad-2.jpg) repeat-x;
+	border: 1px solid #0f568a;
+	color: #fdfdfd;
+	cursor: pointer;
+	padding: 4px 8px;
+}
+
+.btn:hover
+{
+	background-image: url(../images/grad-2_ov.jpg);
+	color: #fff;
+}
+
+.calendar td td
+{
+	padding: 2px 5px;
+	border: none;
+}
+
+.calendar th
+{
+	padding: 2px;
+	border: 1px solid #ccc;
+	background: #2B93DC;
+	color: #fff;
+}
+
+.calendar td
+{
+	width: auto !important;
+	padding: 2px;
+	border: 1px solid #ccc;
+}
+
+.blue-bg
+{
+	background: #369 !important;
+	color: #fff !important;
+}
+
+.blue-bg a
+{
+	color: #fff !important;
+}
+
+/*table th
+{
+	padding: 5px;
+	background: #369;
+	color: #fff;
+	border: 1px solid #ccc;
+}
+
+table.border td
+{
+	padding: 5px;
+	border: 1px solid #ccc;
+}
+
+table.border .pager td
+{
+	padding: 0;
+	padding-right: 5px;
+	border: none;
+}*/
+
+.menu td
+{
+	background: #2B93DC;
+	color: #fff;
+}
+
+.menu a:link, .menu a:visited
+{
+	display: block;
+	padding: 5px 10px;
+	background: #2B93DC;
+	color: #fff;
+	text-decoration: none;
+}
+
+.menu a:hover, .menu a:active
+{
+	background: #369;
+	color: #fff;
+}
+
+.menu img
+{
+	display: none;
+}
+
+.menu
+{
+	border: 1px solid #369 !important;
+}
+
+.login
+{
+	border: 1px solid #ccc;
+}
+
+.login td
+{
+	padding: 5px;
+}
+
+.title
+{
+	background: #369;
+	color: #fff;
+	padding: 10px !important;
+}
+/*分散對齊*/
+.ju
+{	
+ 	/*text-align:justify; 
+ 	text-justify:Distribute-all-lines;*/
+ 	word-spacing:5px;
+ 	white-space:nowrap;
+}
+/*報到意願登入*/
+.logincon{
+
+
+ margin: 0 auto;
+ margin-top: 20px;
+ margin-bottom: 30px;
+ background-color:#d0d0d0;
+ width:500px;
+ word-spacing:5px;
+  border-radius: 10px;
+   box-shadow: 3px 3px 12px grey;
+   
+
+}
+.logincon input[type='submit']{
+  margin-left:5px;
+  margin-top:5px;
+  margin-bottom:5px;
+  height:40px;
+  width:40%;
+  color:#ffffff;
+}
+
+.logintitle {
+
+ background-color:#337ab7;
+ word-spacing:5px;
+ text-align:center;
+ border-radius: 10px 10px 0px 0px;
+ color:white;
+ line-height:40px;
+ height:30px;
+
+
+
+}
+.loginAnnounceTitle {
+ background-color:#337ab7;
+ word-spacing:5px;
+ text-align:center;
+ border-radius: 10px 10px 0px 0px;
+ color:white;
+ line-height:40px;
+ height:30px;
+}
+
+.loginAnnounc{
+
+
+ margin: 0 auto;
+ margin-top: 20px;
+ margin-bottom: 30px;
+ background-color:#d0d0d0;
+ width:500px;
+ word-spacing:5px;
+  border-radius: 10px;
+   box-shadow: 3px 3px 12px grey;
+   
+
+}
+.fieldclass {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding:10px 10px 10px 10px;
+    border-radius: 8px;
+    border: 0px;
+    background: antiquewhite;
+    box-shadow: 2px 2px 2px #888888;
+    line-height: 24px;  
+    /*letter-spacing: 3px;*/   
+    margin:0 auto; 
+    width:80%;
+    margin-bottom:20px;
+    
+    /*display:inline-block;*/
+          
+}
+.legendclass {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding:5px 5px 5px 5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border-radius: 5px;
+    border-color: #0094ff;
+    background: #6bbffc;
+    font-size: 16px;
+    font-family: Arial;
+    font-weight:bold;
+}
+legend {
+    width: auto;
+
+}
+.logincon span{
+    margin-left:10px;
+    margin-top:40px;
+    font-size:16px;
+}
+
+.logincon input[type='text']{
+
+    margin-top:10px;
+    height:28px;
+}
+.logincon input[type='number']{
+
+    margin-top:10px;
+    height:28px;
+}
+.logincon select{
+
+    height:40px;
+    margin-top:20px;
+}
+.logincon input[type=radio ] {
+   margin-top:10px;
+}
+
+/*報到意願填寫表單*/
+.stucontainer {
+  width:800px;
+  margin:0 auto;
+  overflow: hidden;
+}
+.stutitle {
+    color:white;
+    background-color:#337ab7;
+    font-size:24px;
+    text-align:center;
+    border-radius: 15px 15px 0px 0px ;
+    border:1px solid #BEBEBE ;
+    width: 99.7%;
+}
+.datatitle {
+  width:199px;
+  float:left;
+  letter-spacing:2px;
+  font-size:16px;
+  border:1px solid #BEBEBE ;
+  background-color:	#E0E0E0;
+  line-height: 44px;
+  padding-bottom: 500em;
+  margin-bottom: -500em;
+}
+.datatitle span{
+  margin-left:48px;
+  padding-top:5px;
+  font-weight:bold;
+
+}
+
+.studata {
+  width:597px;
+  font-size:16px;
+
+  float:left;
+  border:1px solid #BEBEBE ;
+  margin-right: -1px; /* For IE */
+  padding-bottom: 500em;
+  margin-bottom: -500em;
+ 
+
+
+}
+.studata  span{
+    line-height: 44px;
+     margin-left:10px;
+}
+.studata input[type='radio'] {
+   margin-left:10px; 
+}
+.studatafooter {
+   width:97.4%;
+   float:left;
+   font-size:16px;
+   background-color:white;
+   border-top: 1px solid #BEBEBE;
+   border-left: 1px solid #BEBEBE;
+   border-bottom: 1px solid #BEBEBE;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    letter-spacing: 1px;
+    line-height: 22px;
+    padding:8px;
+
+  
+}
+/* radiobuttonlist 的間距要放大*/
+#ContentPlaceHolder1_RadioButtonList1 tr td { padding:.5em; margin:.3em }
+
+
+.clearfix {
+ clear:both;
+}
+
+/*rwd table原始樣式*/
+
+/*.rwd-table {
+  border: 1px solid #CCDDFF;
+  border-collapse: collapse;
+  margin-top:10px;
+}
+  .rwd-table td {
+   border: 1px solid #CCDDFF;
+    padding: 2px 4px;
+    /*text-align: center;
+  }
+.rwd-table th{
+	border: 1px solid #CCDDFF;
+	padding: 5px;
+	text-align: center;
+    white-space:nowrap;
+     color:white;
+    background-color:#337ab7;
+}*/
+    .rwd-select {
+    font-size:14px;
+    height:40px;
+    }
+ .rwd-table td:before {
+     display: none;
+     }
+
+ .rwd-table th {
+    display: table-cell;
+    padding: 0.25em 0.5em;
+    background-color:#337ab7;
+    color:white;
+    border: 1px solid #CCDDFF;
+}
+    
+ .rwd-table td {
+    display: table-cell;
+    padding: 0.25em 0.5em;
+     border: 1px solid #CCDDFF;
+               
+ }
+
+.rwd-table th:first-child, .rwd-table td:first-child {
+    padding-left: 0;
+ }
+
+.rwd-table th:last-child, .rwd-table td:last-child {
+    padding-right: 0;
+ }
+
+.rwd-table th, .rwd-table td {
+    padding: 1em !important;
+ }
+  .rwd-table tr:nth-of-type(2n) {
+     background: #FFE8BF;
+  }
+
+
+
+ 
+
+
+
+/*平板*/
+@media (max-width:1023px) {
+
+
+
+
+
+.stucontainer {
+  width:100%;   
+ }
+.stutitle {
+ float:none;
+ width:100%;
+ height:auto;
+
+ padding:8px;
+}
+.datatitle {
+ float:none;
+ width:100%;
+}
+.datatitle span {
+  margin-left:10px;    
+}
+.studata {
+ float:none;
+  width:100%;
+  height:auto;
+  background-color:white;
+  
+}
+.studatafooter {
+   float:none;
+   height:auto;
+     }
+ label {
+     display:inline;
+    }
+
+
+}
+
+
+@media (max-width:768px) {
+ .wrapper {
+  
+   width:100%;
+}
+ .logincon {
+  width:100%;
+
+      }
+ .content {
+    padding:0;
+    }
+ .logincon input[type=radio ] {
+  font-size:10px;
+}
+
+}
+
+@media (max-width:514px) {
+ .banner h1 {
+   font-size:20px;
+ }
+
+
+
+.banner h1 {
+  
+   font-size:24px;
+   top:15px;
+   left:10px;
+}
+
+
+.logincon span{
+  font-size:14px;
+  margin-left:0px;
+ 
+
+      }
+ 
+.logincon select{
+  font-size:12px;
+  width:300px;
+  margin-left:0;
+      }
+.studata {
+
+ font-size:16px;
+}
+.itemmargin {
+ margin-left:10px;
+ margin-top:10px;
+}
+
+ /*rwd table*/
+
+    /*.rwd-table tr {
+    border: 1px solid #CCDDFF;
+  }
+   
+  .rwd-table th {
+      display: none;
+  }
+   
+  .rwd-table td {
+      display: block;
+      border: none;
+      margin-bottom:10px;
+  }
+   
+  .rwd-table td:before {
+      content: attr(data-th) " ";
+      float: left;
+      font-weight: bold;
+    /*  background-color:#337ab7;
+      color:#5599FF;
+      letter-spacing:2px;
+      padding-left:2px;
+      padding-right:2px;
+    /*  padding:3px 3px 3px 3px;
+      margin-right:2px;
+  }*/
+  .rwd-select {
+    font-size:12px;
+
+   }
+  .rwd-table {
+      background: #fff;
+      overflow: hidden;
+  }
+
+  .rwd-table tr:nth-of-type(2n) {
+   /* background: #eee;*/ 
+   background:#FFE8BF;
+  }
+
+  .rwd-table th, .rwd-table td {
+      margin: 0.5em 1em;
+  }
+
+  .rwd-table {
+       min-width: 100%;
+  }
+
+  .rwd-table th {
+      display: none;
+      border: none;
+  }
+
+  .rwd-table td {
+      display: block;
+      border: none;
+  }
+
+  .rwd-table td:before {
+      content: attr(data-th) " : ";
+      font-weight: bold;
+      width: 6.5em;
+      display: inline-block;
+  }
+
+   .rwd-table th, .rwd-table td {
+      text-align: left;
+  }
+
+  .rwd-table th, .rwd-table td:before {
+      color: #25517d;
+      font-weight: bold;
+  }
+
+
+}
+

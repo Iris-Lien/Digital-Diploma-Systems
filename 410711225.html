@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	
+	<meta charset="utf-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	
+	<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link href="./NDHUdigitaldiploma_files/bootstrap.css" rel="stylesheet">
+	<link href="./NDHUdigitaldiploma_files/master.css" rel="stylesheet" type="text/css">
+    
+    <script src="./NDHUdigitaldiploma_files/jquery-1.7.2.min.js.下載" type="text/javascript"></script>
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <script src="./NDHUdigitaldiploma_files/jquery-1.3.1.js.下載" type="text/javascript"></script>
+    <script src="./NDHUdigitaldiploma_files/jquery.tipsy.js.下載" type="text/javascript"></script>
+    <link href="./NDHUdigitaldiploma_files/tipsy.css" rel="stylesheet" type="text/css">
+	<title>Digital diploma information</title>
+	<script src="js/web3.min.js"></script>
+	
+    </script>
+  </head>
+  
+  <body>
+  
+	<div class="wrapper">
+        <div class="top">
+            <div class="left-top">
+            </div>
+            <div class="right-top">
+            </div>
+        </div>
+        <div class="middle">
+            <div class="center">
+                <div class="logo">
+                    <img src="./NDHUdigitaldiploma_files/logo.jpg" alt="國立東華大學">
+              
+                </div>
+                <div class="banner">
+                    <img src="./NDHUdigitaldiploma_files/sysname.jpg" alt="">
+                    <h1>數位畢業證書資訊</h1>
+
+                </div>
+                <div class="shad">
+                </div>
+                <div class="content">
+    
+	<label class="col-lg-2  control-label">學號</label>
+	<em id="StudentID"></em>
+	<br>
+	<br>
+	<label class="col-lg-2  control-label">有效性</label>
+	<em id="Mark"></em>
+	<br>
+	<br>
+    <label class="col-lg-2  control-label">證書位址</label>
+	<em id="Address"></em>
+	<br>
+	<br>
+	<label class="col-lg-2  control-label">發證位址</label>
+	<em id="NDHU"></em>
+	<br>
+	<br>
+	<img src="410711225.png" >
+	<script>
+	web3 = new Web3(window.ethereum)
+        window.ethereum.enable().catch(error => {
+        // User denied account access
+        console.log(error)
+    });
+	
+	var Contract;
+	var abi = [
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_student_id",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_ID",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "_birth",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_mark",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "_dip_address",
+				"type": "string"
+			}
+		],
+		"name": "create",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "num",
+				"type": "uint256"
+			}
+		],
+		"name": "get_birth",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "num",
+				"type": "uint256"
+			}
+		],
+		"name": "get_dip",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "num",
+				"type": "uint256"
+			}
+		],
+		"name": "get_mark",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "num",
+				"type": "uint256"
+			}
+		],
+		"name": "get_student_id",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"name": "people",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "student_id",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "ID",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "birth",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "mark",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "dip_address",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "persons",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "student_id",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "ID",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "birth",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "mark",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "dip_address",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "show",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}
+];
+	
+	var address = '0xC06Dd861c4015aC8A624B9F41e3A0FBB8B21FA2F';	
+	
+	var ID = 67890;
+	
+	async function init1(){
+        Contract = await new web3.eth.Contract(abi,address);
+        Contract.methods.get_student_id(ID).call()
+        .then(function(data){
+            document.getElementById('StudentID').textContent = data;
+        })
+    }
+    init1(); 
+	
+	async function init2(){
+        Contract = await new web3.eth.Contract(abi,address);
+        Contract.methods.get_mark(ID).call()
+        .then(function(data){
+            document.getElementById('Mark').textContent = data;
+        })
+    }
+    init2(); 
+	
+	async function init3(){
+        Contract = await new web3.eth.Contract(abi,address);
+        Contract.methods.get_dip(ID).call()
+        .then(function(data){
+            document.getElementById('Address').textContent = data;
+        })
+    }
+    init3();
+	document.getElementById('NDHU').textContent = '0x88D9a9ec1f9456Ef9a908265480A6020c86652Db';
+	</script>
+	
+  </body>
+</html>
