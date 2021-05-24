@@ -1,6 +1,6 @@
 # 以區塊鏈及去中心化儲存IPFS建置的校園畢業證書發放系統
 
-<img src="https://user-images.githubusercontent.com/56546170/119334704-ff1f1500-bcbd-11eb-80cf-f781624264fc.png" width="400">
+<img src="https://user-images.githubusercontent.com/56546170/119351291-e836ed80-bcd2-11eb-9dce-dcb5b5ccdca1.jpg" width="800">
 
 ## 摘要
 畢業證書是專業能力及教育程度的證明，證書的發放是經由校方審查通過後給予。在升學、求職的審查過程中，我們常需要提交畢業證書。一般而言，畢業證書的發放及遺失補發的程序較為繁瑣。企業及教育單位、人力銀行為了審查證書的正確完整性，需要時間、人力的消耗。本專題提出以區塊鏈及去中心化儲存技術建置校園畢業證書發放系統。本專題使用以太坊中的智能合約將畢業證書的資訊紀錄於以太坊中。為了更安全、可靠地使用去中心化儲存系統，我們將畢業證書佈置於星際檔案系統IPFS。 IPFS 是已經有完整的API的成熟系統，在撰寫Script APP時容易，且作為儲存系統的可靠性高。
@@ -27,7 +27,7 @@
 
 ## 系統設計概念
 本專題所提及的畢業證書發放、查證系統是利用智能合約將證書的有效性寫上區塊鏈中以達到不可竄改、可靠的查證系統。區塊鏈及去中心化儲存的校園畢業證書發放系統架構圖如下
-<img src="https://github.com/Iris-Lien/Digital-Diploma-Systems/blob/main/%E6%9E%B6%E6%A7%8B%E5%9C%96.jpg" width="700">
+<img src="https://github.com/Iris-Lien/Digital-Diploma-Systems/blob/main/%E6%9E%B6%E6%A7%8B%E5%9C%96.jpg" width="800">
 
 區塊鏈及去中心化儲存的校園畢業證書發放系統包含了發證單位(學校)、憑證擁有者(學生)、和驗證單位(企業、教育機構、人力銀行)。
 這三個實體，我們分別以發證學校單位(S)、憑證擁有者學生(O)、和憑證驗證單位(V)來表示。下面顯示了本系統的三個部分，包括畢業證書上傳階段、畢業證書下載階段、和第三方畢業證書驗證階段。
@@ -73,7 +73,7 @@
 前面提到的證書撤銷作業，所以若是S透過智能合約將O的畢業證書撤銷、廢除，則V可在數位畢業證書資訊中看到相關的有效性欄位變更為"Invalid"無效，
 且該頁面下方的QR碼可連接至該位學生於IPFS上的畢業證書，證實為有此學生之畢業證書。
 
-<img src="https://github.com/Iris-Lien/Digital-Diploma-Systems/blob/main/%E5%9C%96%E7%89%872.png" width="700">
+<img src="https://github.com/Iris-Lien/Digital-Diploma-Systems/blob/main/%E5%9C%96%E7%89%872.png" width="800">
     
 ## 開發環境及軟體
 ### Remix IDE
@@ -106,11 +106,14 @@ add ./data.jpg
 * 下載連結 https://prepros.io/
 * 點選左下方Add Project導入專案
 
-<img src="https://user-images.githubusercontent.com/56546170/119266865-0b07ca00-bc1f-11eb-8dac-861b7902e6e1.png" width="700">
+<img src="https://user-images.githubusercontent.com/56546170/119266865-0b07ca00-bc1f-11eb-8dac-861b7902e6e1.png" width="800">
 
 * 右鍵選取要打開的檔案即可開啟網頁(其他人也可透過這個網址連結)
 
-<img src="https://user-images.githubusercontent.com/56546170/119266914-3be7ff00-bc1f-11eb-89f9-98a965bfbfc4.png" width="700">
+<img src="https://user-images.githubusercontent.com/56546170/119266914-3be7ff00-bc1f-11eb-89f9-98a965bfbfc4.png" width="800">
+
+## 成果展示
+* 點此連結觀看展示影片 https://www.youtube.com/watch?v=cib09eeP7yY
 
 ## 結論
 本專題植基於區塊鏈及去中心化儲存系統IPFS來建置校園畢業證書發放系統，除了IPFS外Swarm也是個不錯的選擇，Swarm由以太坊基金會所成立並且是自身發展的去中心化檔案系統。
