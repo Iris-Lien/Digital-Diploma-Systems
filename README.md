@@ -1,8 +1,6 @@
 # 以區塊鏈及去中心化儲存IPFS建置的校園畢業證書發放系統
 
-<img src="https://user-images.githubusercontent.com/56546170/119351291-e836ed80-bcd2-11eb-9dce-dcb5b5ccdca1.jpg" width="800">
-
-圖片來源：https://www.hbrtaiwan.com/article_content_AR0009452.html
+<img src="https://user-images.githubusercontent.com/56546170/136023481-a91fd318-f5c7-4ed4-9a43-c095320c6dd3.png" width="400">  
 
 ## 摘要
 畢業證書是專業能力及教育程度的證明，證書的發放是經由校方審查通過後給予。在升學、求職的審查過程中，我們常需要提交畢業證書。一般而言，畢業證書的發放及遺失補發的程序較為繁瑣。企業及教育單位、人力銀行為了審查證書的正確完整性，需要時間、人力的消耗。本專題提出以區塊鏈及去中心化儲存技術建置校園畢業證書發放系統。本專題使用以太坊中的智能合約將畢業證書的資訊紀錄於以太坊中。為了更安全、可靠地使用去中心化儲存系統，我們將畢業證書佈置於星際檔案系統IPFS。 IPFS 是已經有完整的API的成熟系統，在撰寫Script APP時容易，且作為儲存系統的可靠性高。
